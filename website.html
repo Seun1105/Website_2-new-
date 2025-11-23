@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>National Chronic Disease Prevention Framework</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top utility badge -->
+  <div class="top-badge" role="note">
+    <div class="container top-badge-inner">
+      <span>Backed by evidence-based public health • Data ethics first • Community-led</span>
+      <nav class="utility-links" aria-label="utility links">
+        <a href="#contact">Contact</a>
+        <a href="#" id="newsletterLink">Newsletter</a>
+        <button class="lang-switch" aria-label="switch language">EN</button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <button class="brand" onclick="scrollToTop()">
+        <span class="brand-mark">NC</span>
+        <span class="brand-name">National Chronic Disease Prevention Framework</span>
+      </button>
+
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <button class="nav-link" onclick="scrollToSection('problem')">Problem</button>
+        <button class="nav-link" onclick="scrollToSection('solution')">Solution</button>
+        <button class="nav-link" onclick="scrollToSection('pillars')">How it Works</button>
+        <button class="nav-link" onclick="scrollToSection('impact')">Impact</button>
+        <button class="nav-link" onclick="scrollToSection('founder')">Founder</button>
+        <button class="btn btn-primary" onclick="scrollToSection('contact')">Request a Briefing</button>
+      </nav>
+
+      <button id="mobileMenuBtn" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMobileMenu()">
+        ☰
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <button onclick="scrollToSection('problem')" class="mobile-nav-link">Problem</button>
+        <button onclick="scrollToSection('solution')" class="mobile-nav-link">Solution</button>
+        <button onclick="scrollToSection('pillars')" class="mobile-nav-link">How it Works</button>
+        <button onclick="scrollToSection('impact')" class="mobile-nav-link">Impact</button>
+        <button onclick="scrollToSection('founder')" class="mobile-nav-link">Founder</button>
+        <button class="btn btn-primary btn-full" onclick="scrollToSection('contact')">Request a Briefing</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Identify prevention deserts. Intervene early. Save lives.</h1>
+          <p class="lead">A national epidemiologic surveillance and intervention framework that helps public health agencies pinpoint high-risk communities and deploy proven screening, risk-stratification, and behavior-change programs at scale.</p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="#contact">Request a Briefing (Agencies)</a>
+            <a class="btn btn-outline btn-lg" href="#partners">Partner With Us (Communities)</a>
+          </div>
+
+          <p class="cred">Founded by a UNC Applied Epidemiology researcher and Mandela Washington Fellow.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section id="problem" class="section section-white">
+      <div class="container section-inner">
+        <div class="section-head">
+          <h2>A Preventable Crisis, Hitting Communities Hard</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="problem-grid">
+          <div class="problem-copy">
+            <p class="muted">Too many Americans are diagnosed late or not linked to prevention at all. Prevention deserts persist — places where risk is high and access is limited.</p>
+            <ul class="bullets">
+              <li>Preventable chronic diseases (heart disease, diabetes, hypertension) keep claiming lives.</li>
+              <li>Early detection and prevention are inconsistent across regions.</li>
+              <li>High-risk communities often lack access to timely screening and lifestyle support.</li>
+              <li>Fragmented data + programs = missed opportunities to save lives.</li>
+            </ul>
+            <button class="link-button" onclick="scrollToSection('impact')">See the Evidence</button>
+          </div>
+
+          <div class="problem-visual">
+            <div class="stat-card">
+              <div class="stat-number">Late diagnosis + low screening = avoidable harm</div>
+              <p class="stat-note">We map where prevention access is lowest and risk is highest.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section id="solution" class="section section-gray">
+      <div class="container section-inner">
+        <div class="section-head">
+          <h2>A National Epidemiologic Surveillance & Intervention Framework</h2>
+          <div class="divider"></div>
+          <p class="section-description">We help public health departments, healthcare institutions, and community organizations identify “prevention deserts” and coordinate standardized screening, risk stratification, and culturally adapted behavior-change programs.</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-tile">
+            <h3>Pinpoint Risk</h3>
+            <p>Community profiles & prevention maps that reveal disparities.</p>
+          </div>
+          <div class="value-tile">
+            <h3>Act Early</h3>
+            <p>Screening plus referral pathways to catch disease sooner.</p>
+          </div>
+          <div class="value-tile">
+            <h3>Sustain Change</h3>
+            <p>Culturally adapted behavior programs and ongoing monitoring.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works — 4 Pillars -->
+    <section id="pillars" class="section section-white">
+      <div class="container section-inner">
+        <div class="section-head">
+          <h2>From Insight to Action: Four Pillars</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar">
+            <h4>Standardized Screening</h4>
+            <p>Clear, consistent protocols aligned with USPSTF recommendations for primary care and community settings.</p>
+          </article>
+
+          <article class="pillar">
+            <h4>Risk Stratification & Community Profiles</h4>
+            <p>County-level profiles that highlight burden and disparities to guide equitable resource allocation.</p>
+          </article>
+
+          <article class="pillar">
+            <h4>Culturally Adapted Behavior Programs</h4>
+            <p>Nutrition, activity, and cessation programs modeled on proven approaches and tailored locally.</p>
+          </article>
+
+          <article class="pillar">
+            <h4>Monitoring & Improvement</h4>
+            <p>Simple outcomes tracking to refine programs over time (screening uptake, diagnoses, referrals, behavior adoption).</p>
+          </article>
+        </div>
+
+        <div class="center-cta">
+          <a class="btn btn-primary" href="#contact">Explore the Framework</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who it's for -->
+    <section id="who" class="section section-gray">
+      <div class="container section-inner">
+        <div class="section-head">
+          <h2>Who It’s For</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="audience-grid">
+          <div class="audience-card">Agencies & Health Departments</div>
+          <div class="audience-card">Hospitals & Clinics</div>
+          <div class="audience-card">Community Organizations & FQHCs</div>
+          <div class="audience-card">Payers & Philanthropy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Early Impact / Pilot -->
+    <section id="impact" class="section section-white">
+      <div class="container section-inner">
+        <div class="section-head">
+          <h2>Built to Scale, Designed to Measure</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-cards">
+            <div class="mini-outcome">Increase screening rates in identified prevention deserts</div>
+            <div class="mini-outcome">Improve referral completion and follow-up</div>
+            <div class="mini-outcome">Reduce avoidable ED visits for uncontrolled chronic conditions</div>
+            <div class="mini-outcome">Boost participation in behavior-change programs</div>
+          </div>
+
+          <div class="impact-visual">
+            <img src="https://images.unsplash.com/photo-1584270354949-7e4c57d6b3d4?auto=format&fit=crop&w=1080&q=60" alt="Data & community health" />
+          </div>
+        </div>
+
+        <div class="center-cta">
+          <a class="btn btn-outline" href="#" download="overview.pdf">Download the One-Page Overview (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ethics & Equity -->
+    <section id="ethics" class="section section-gray">
+      <div class="container section-inner">
+        <div class="section-head">
+          <h2>Equity, Privacy, and Community First</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="ethics-grid">
+          <ul class="ethics-list">
+            <li>Uses deidentified, publicly available population health indicators.</li>
+            <li>Community co-design and culturally adapted materials.</li>
+            <li>Clear data governance and transparency.</li>
+          </ul>
+
+          <div>
+            <button class="link-button" onclick="openDoc('ethics-brief.pdf')">Read Our Ethics Brief</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder -->
+    <section id="founder" class="section section-white">
+      <div class="container section-inner">
+        <div class="section-head">
+          <h2>Meet the Founder</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="founder-card">
+          <div class="founder-photo">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=60" alt="Hanan Kadi Abafita" />
+          </div>
+
+          <div class="founder-bio">
+            <h3>Hanan Kadi Abafita, MBBS, MPH</h3>
+            <p>Hanan’s work bridges clinical training and population health, focusing on practical frameworks that help agencies identify prevention deserts and act early. She partners with public health departments, hospitals, and community leaders to translate evidence into lifesaving programs.</p>
+
+            <div class="founder-actions">
+              <a class="btn btn-outline" href="mailto:info@yourdomain.org">Email</a>
+              <a class="btn btn-primary" href="#contact">Contact the Founder</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partnerships -->
+    <section id="partners" class="section section-gray">
+      <div class="container section-inner">
+        <div class="section-head">
+          <h2>Collaboration Drives Prevention</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="partners-grid">
+          <button class="partner-btn">Public Health Agencies</button>
+          <button class="partner-btn">Hospitals & Clinics</button>
+          <button class="partner-btn">Community Organizations</button>
+          <button class="partner-btn">Funders & Philanthropy</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-white">
+      <div class="container section-inner">
+        <div class="section-head">
+          <h2>Let's Connect</h2>
+          <div class="divider"></div>
+          <p class="section-description">Interested in learning more, supporting our work, or collaborating on community health initiatives? Let's connect.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-card">
+              <h4>Email</h4>
+              <a href="mailto:info@yourdomain.org">info@yourdomain.org</a>
+            </div>
+
+            <div class="contact-card">
+              <h4>Invite Hanan to Speak</h4>
+              <a href="mailto:info@yourdomain.org?subject=Invite%20Hanan%20to%20Speak">Invite</a>
+            </div>
+
+            <div class="contact-card">
+              <h4>Quick Links</h4>
+              <nav class="footer-links">
+                <a href="#pillars">Framework</a>
+                <a href="#ethics">Ethics</a>
+                <a href="#partners">Partners</a>
+                <a href="#contact">Contact</a>
+              </nav>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full name *</label>
+                  <input id="name" name="name" required placeholder="Your name" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input id="email" name="email" type="email" required placeholder="you@example.com" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="organization">Organization</label>
+                <input id="organization" name="organization" placeholder="Optional" />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your interest..."></textarea>
+              </div>
+
+              <button class="btn btn-primary btn-full" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="container footer-inner">
+            <div class="footer-brand">
+              <span class="brand-mark small">NC</span>
+              <div>
+                <div>National Chronic Disease Prevention Framework</div>
+                <div class="small muted">© <span id="year"></span> National Chronic Disease Prevention Framework</div>
+              </div>
+            </div>
+            <div class="small muted">Privacy • Terms • Accessibility</div>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
