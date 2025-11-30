@@ -6,7 +6,7 @@
     --color-secondary: #4682B4;
     /* Steel Blue - Professional, Calm */
     --color-secondary-dark: #2F5D85;
-    --color-accent: #20B2AA;
+    --color-accent: oklch(69.121% 0.11423 189.001);
     /* Light Sea Green */
     --color-text-main: #333333;
     --color-text-light: #666666;
@@ -235,10 +235,10 @@ p {
 
 /* 1) Hero Section */
 .hero {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     padding: var(--spacing-xl) 0;
     text-align: center;
-     background-image: 
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    background-image: 
         linear-gradient(135deg, rgba(240, 249, 255, 0.65), rgba(224, 242, 254, 0.65)),
         url('https://images.unsplash.com/photo-1658734029438-d97357737bf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBoZWFsdGhjYXJlJTIwZGl2ZXJzaXR5fGVufDF8fHx8MTc2MzMxODk3MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');
     background-size: cover;
@@ -392,8 +392,16 @@ p {
 
 /* 5) Who It's For */
 .audience-section {
-    background-color: var(--color-primary);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    background-image: 
+        linear-gradient(135deg, rgba(46, 139, 87, 0.65), rgba(32, 178, 170, 0.65)),
+        url('https://images.unsplash.com/photo-1658734029438-d97357737bf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBoZWFsdGhjYXJlJTIwZGl2ZXJzaXR5fGVufDF8fHx8MTc2MzMxODk3MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
     color: white;
+    transition: background-image 0.5s ease-in-out;
 }
 
 .audience-section .section-title {
@@ -407,14 +415,35 @@ p {
 }
 
 .audience-card {
-    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.125rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Keep content at the top */
+   
+    height: 150px;
+    
+    /* Optional: Smooth transition for hover effects */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+
+
+.audience-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-primary);
+}
+
 
 /* 6) Early Impact */
 .impact-section {

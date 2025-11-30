@@ -56,6 +56,44 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
+    // Who it is for
+    // 1. Get references to the main section and all cards
+    const audienceSection = document.getElementById('audience');
+    const audienceCards = document.querySelectorAll('.audience-card');
+    
+    // 2. Store the default background property
+    const defaultBg = window.getComputedStyle(audienceSection).backgroundImage;
+
+    // 3. Loop through each card to add event listeners
+    audienceCards.forEach(card => {
+        // Get the specific background URL from the data attribute
+        const newBgUrl = card.getAttribute('data-bg-url');
+
+        // Event: Mouse enters the card (Hover)
+        card.addEventListener('mouseenter', () => {
+            if (newBgUrl) {
+                // Change the main section's background image
+                audienceSection.style.backgroundImage = newBgUrl;
+                audienceSection.style.backgroundSize = "cover"
+            }
+        });
+
+        // Event: Mouse leaves the card (Hover out)
+        card.addEventListener('mouseleave', () => {
+            // Revert the main section's background to the default
+            audienceSection.style.backgroundImage = defaultBg;
+        });
+
+        // If you only want this on CLICK instead of hover, use this:
+        /*
+        card.addEventListener('click', () => {
+             if (newBgUrl) {
+                audienceSection.style.backgroundImage = newBgUrl;
+            }
+        });
+        */
+    });
+
     // Newsletter Form Handling
     const newsletterForm = document.getElementById('newsletter-form');
     if (newsletterForm) {
