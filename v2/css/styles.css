@@ -286,7 +286,7 @@ p {
     display: flex;
     justify-content: center;
     gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+    margin-top: var(--spacing-xl);
 }
 
 .credibility-line {
